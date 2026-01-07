@@ -59,6 +59,9 @@ def get_num_words(path_to_file):
         return total_words, character_count_dict
 
 
+def sort_on(items):
+    return items["num"]
+
 
 def revamp_dictionary(char_count_dict):
     
@@ -106,6 +109,9 @@ def revamp_dictionary(char_count_dict):
         revamp_dict_list.append(temp_dict)
 
     print(revamp_dict_list)
+
+    revamp_dict_list.sort(reverse = True, key=sort_on)
+    print(f"debugging: revamp dict list should be sorted: {revamp_dict_list}")
 
 
     
