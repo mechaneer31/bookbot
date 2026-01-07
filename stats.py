@@ -65,11 +65,15 @@ def revamp_dictionary(char_count_dict):
     dict_revamp_list = []
 
     for char_count_key in char_count_dict:
+       
+       #remove any non-alphanumeric pairs
        if char_count_key.isalpha():
         print(f"debugging: char_count_pair is: {char_count_key}")
 
+        #initialize temp list to append dict_revamp_list
         temp_list = []
         
+        #place updated key/value pairs in temp list
         temp_list.append("char")
         temp_list.append(char_count_key)
         temp_list.append("num")
@@ -77,6 +81,35 @@ def revamp_dictionary(char_count_dict):
 
         print(f"debugging: temp list is: {temp_list}")
 
+        #add the temp list to dict_revamp_list 
         dict_revamp_list.append(temp_list)
         print(f"debugging: dict_revamp_list is: {dict_revamp_list}")
+
+
+    #create empty new dictionary for new key/value pairs
+    #dict_revamp_dict = {}
+
+    revamp_dict_list = []
+
+    #loop through dict_revamp_list to add new key/value pairs to dictionary
+    for list in dict_revamp_list:
+        
+        #create temp_dict for loop to add to list
+        temp_dict = {}
+
+        print(f"debugging: list is: {list}")
+        temp_dict[list[0]] = list[1]
+        temp_dict[list[2]] = list[3]
+
+        print(f"debugging: dict_revamp_dict is: {temp_dict}")
+
+        revamp_dict_list.append(temp_dict)
+
+    print(revamp_dict_list)
+
+
+    
+    
+    
+
 
