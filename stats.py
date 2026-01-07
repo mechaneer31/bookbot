@@ -71,7 +71,7 @@ def revamp_dictionary(char_count_dict):
        
        #remove any non-alphanumeric pairs
        if char_count_key.isalpha():
-        print(f"debugging: char_count_pair is: {char_count_key}")
+        #print(f"debugging: char_count_pair is: {char_count_key}")
 
         #initialize temp list to append dict_revamp_list
         temp_list = []
@@ -82,11 +82,11 @@ def revamp_dictionary(char_count_dict):
         temp_list.append("num")
         temp_list.append(char_count_dict[char_count_key])
 
-        print(f"debugging: temp list is: {temp_list}")
+        #print(f"debugging: temp list is: {temp_list}")
 
         #add the temp list to dict_revamp_list 
         dict_revamp_list.append(temp_list)
-        print(f"debugging: dict_revamp_list is: {dict_revamp_list}")
+        #print(f"debugging: dict_revamp_list is: {dict_revamp_list}")
 
 
     #create empty new dictionary for new key/value pairs
@@ -100,22 +100,23 @@ def revamp_dictionary(char_count_dict):
         #create temp_dict for loop to add to list
         temp_dict = {}
 
-        print(f"debugging: list is: {list}")
+        #print(f"debugging: list is: {list}")
         temp_dict[list[0]] = list[1]
         temp_dict[list[2]] = list[3]
 
-        print(f"debugging: dict_revamp_dict is: {temp_dict}")
+        #print(f"debugging: dict_revamp_dict is: {temp_dict}")
 
         revamp_dict_list.append(temp_dict)
 
-    print(revamp_dict_list)
+    #print(revamp_dict_list)
 
     revamp_dict_list.sort(reverse = True, key=sort_on)
-    print(f"debugging: revamp dict list should be sorted: {revamp_dict_list}")
+    #print(f"debugging: revamp dict list should be sorted: {revamp_dict_list}")
 
+    return revamp_dict_list
 
     
-    
+
     
 
 
