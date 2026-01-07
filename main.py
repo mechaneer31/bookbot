@@ -1,4 +1,4 @@
-from stats import get_num_words
+from stats import get_num_words, revamp_dictionary
 
 
 
@@ -11,6 +11,6 @@ def main():
     print(f"Found {book_num_words} total words")
     print(book_char_dict)
     
-
+    data_report = revamp_dictionary(book_char_dict)
 
 main()

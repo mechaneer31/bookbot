@@ -58,3 +58,25 @@ def get_num_words(path_to_file):
 
         return total_words, character_count_dict
 
+
+
+def revamp_dictionary(char_count_dict):
+    
+    dict_revamp_list = []
+
+    for char_count_key in char_count_dict:
+       if char_count_key.isalpha():
+        print(f"debugging: char_count_pair is: {char_count_key}")
+
+        temp_list = []
+        
+        temp_list.append("char")
+        temp_list.append(char_count_key)
+        temp_list.append("num")
+        temp_list.append(char_count_dict[char_count_key])
+
+        print(f"debugging: temp list is: {temp_list}")
+
+        dict_revamp_list.append(temp_list)
+        print(f"debugging: dict_revamp_list is: {dict_revamp_list}")
+
